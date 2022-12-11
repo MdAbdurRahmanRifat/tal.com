@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poopins", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+ul,
+a {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+:root {
+  --nav-bg: rgb(35, 35, 35);
+  --font-c: white;
+  --fz-l: 42px;
+  --fz-m: 20px;
+  --fz-s: 14px;
+}
+
+/** --- navbar styling starts --- */
+#header {
+  background: var(--nav-bg);
+  position: sticky;
+  top: 0;
+  left: 0;
+  color: var(--font-c);
+  padding: 0 10%;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo h1 {
+  font-family: "noto serif", sans-serif;
+  font-size: var(--fz-l);
+  font-weight: 400;
+  cursor: pointer;
+  line-height: 80px;
+}
+.navbarcontent ul {
+  display: flex;
+  gap: 20px;
+  text-transform: capitalize;
+  font-size: var(--fz-m);
+}
+.navbarcontent .menu {
+  padding: 10px 15px;
+  background-color: transparent;
+  color: white;
+  border-radius: 3px;
+}
+.navbarcontent .menu:hover {
+  background-color: rgb(80, 79, 79);
+}
+.btn {
+  background-color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 3px;
+  color: black;
+}
+
+/** humbergur icon */
+.hum i {
+  font-size: 30px;
+  display: none;
+}
+hr {
+  display: none;
+  border: 1px solid rgba(255, 255, 255, 0.136);
+  border-radius: 100px;
+}
+@media screen and (max-width: 900px) {
+  * {
+    font-size: 80%;
+  }
+}
+
+/** mobile */
+@media screen and (max-width: 700px) {
+  .navbarcontent ul {
+    flex-direction: column;
+    gap: 30px;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: var(--nav-bg);
+    padding: 30px;
+    width: 300px;
+    height: 100vh;
+    font-size: 35px;
+    text-align: center;
+  }
+  .hum i {
+    display: block;
+  }
+  hr {
+    display: initial;
+    border: 1px solid rgba(255, 255, 255, 0.136);
+    border-radius: 100px;
+  }
+}
